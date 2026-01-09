@@ -21,7 +21,7 @@ function Dashboard() {
   const fetchSurveys = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5001/api/survey/all",
+        "https://surveyforms-be.onrender.com/api/survey/all",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -117,3 +117,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
