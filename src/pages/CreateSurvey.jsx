@@ -99,7 +99,7 @@ function CreateSurvey() {
       };
 
       const res = await axios.post(
-        "http://localhost:5001/api/survey/create",
+        "https://surveyforms-be.onrender.com/api/survey/create",
         payload,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -231,3 +231,4 @@ function CreateSurvey() {
 }
 
 export default CreateSurvey;
+
