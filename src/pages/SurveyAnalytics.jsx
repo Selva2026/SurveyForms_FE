@@ -31,7 +31,7 @@ function SurveyAnalytics() {
     const fetchAnalytics = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5001/api/survey/analytics/${id}`,
+          `https://surveyforms-be.onrender.com/api/survey/analytics/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -163,3 +163,4 @@ function SurveyAnalytics() {
 }
 
 export default SurveyAnalytics;
+
