@@ -28,7 +28,7 @@ const Login = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:5001/api/auth/login",
+        "https://surveyforms-be.onrender.com/api/auth/login",
         form
       );
 
@@ -117,3 +117,4 @@ const Login = () => {
 };
 
 export default Login;
+
