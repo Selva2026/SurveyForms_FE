@@ -28,7 +28,7 @@ const Register = () => {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:5001/api/auth/register", form);
+      await axios.post("https://surveyforms-be.onrender.com/api/auth/register", form);
       navigate("/");
     } catch (err) {
       setError(err.response?.data?.msg || "Registration failed");
@@ -124,3 +124,4 @@ const Register = () => {
 };
 
 export default Register;
+
