@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { io } from "socket.io-client";
 
 
-const socket = io("http://localhost:5001");
+const socket = io("https://surveyforms-be.onrender.com");
 
 function MySurvey() {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ function MySurvey() {
   const fetchMySurveys = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5001/api/survey/mysurvey",
+        "https://surveyforms-be.onrender.com/api/survey/mysurvey",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -69,7 +69,7 @@ function MySurvey() {
 
     try {
       await axios.delete(
-        `http://localhost:5001/api/survey/delete/${id}`,
+        `https://surveyforms-be.onrender.com/api/survey/delete/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -140,3 +140,4 @@ function MySurvey() {
 }
 
 export default MySurvey;
+
