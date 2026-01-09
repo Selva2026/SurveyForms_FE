@@ -26,7 +26,7 @@ function ParticipateSurvey() {
   const fetchSurvey = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5001/api/survey/part/${id}`,
+        `https://surveyforms-be.onrender.com/api/survey/part/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -153,3 +153,4 @@ function ParticipateSurvey() {
 }
 
 export default ParticipateSurvey;
+
